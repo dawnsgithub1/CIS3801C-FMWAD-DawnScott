@@ -29,11 +29,11 @@
   </nav>
   <div class="container-fluid">
     <h3>NFDL School Music Teacher Contact information</h3>
-      <p>
+
         <?php
           include 'phpRef/mod3_config.php';
           include 'phpRef/mod3_opendb.php';
-
+  <p>
           $sql= "SELECT FirstName, LastName, EmailAddress FROM contact LIMIT 10";
           $result = mysqli_query($conn, $sql);
 
@@ -44,6 +44,7 @@
             echo "LastName: " . $row["LastName"]. "<br>";
             echo "EmailAddress: " . $row["EmailAddress"]. "<br><hr>";
           }
+            <p>
         } else {
           echo "0 results";
         }
