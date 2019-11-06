@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Media Query Demo</title>  
+    <style type="text/css">
+        .viewing-area span {color:#000; display:none;}   
+
+          /* max-width. The break point for a smart phone */
+          @media screen and (max-width:640px) {      
+            span.lesst640 {display:inline-block;} 
+            }
+
+          /* min-width. The break point for a desktop computer*/
+          @media screen and (max-width:960px) {      
+            span.grtr960 {display:inline-block;} 
+            /*create a border around the wrapper in the desktop display*/      
+            #wrapper {border:solid 1px #000; padding:5px 10px; margin:1px;}    
+            }    
+
+          /* min-width and max-width. Break points for tablets */
+          @media screen and (min-width:641px) and (max-width:959px) {      
+            span.betw641-959 {display:inline-block;}    
+            }    
+      </style>              
+  </head>  
+  <body>  
+    <div id="wrapper">
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>      
+      <div>
+        <p class="viewing-area"><strong>Your current viewing area width is:</strong>
+          <span class="lesst640">less than 640px</span>
+          <span class="betw641-959">between 641 and 959px</span>
+          <span class="grtr960">960px or greater</span>
+          </p>    
+        <p>RWD demo by Adrian W West. Adapted from a demo by: webdesignerwall.com</p>
+      </div>
+    </div>
+    </body>
+</html>
